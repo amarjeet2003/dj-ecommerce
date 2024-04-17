@@ -25,10 +25,10 @@ DEBUG = True
 
 #ALLOWED_HOSTS = ['mywebsite.com', 'www.mywebsite.com', 'localhost', '127.0.0.1', '*']
 
-ALLOWED_HOSTS = ['dev-00em.onrender.com','.vercel.app','*']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
-CSRF_TRUSTED_ORIGINS = ['https://dev-00em.onrender.com']
+# CSRF_TRUSTED_ORIGINS = ['https://dev-00em.onrender.com']
 
 
 # Set allowed cidr nets
