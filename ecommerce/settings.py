@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+import cloudinary_storage
 
 load_dotenv()
 
@@ -25,7 +26,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = ['mywebsite.com', 'www.mywebsite.com', 'localhost', '127.0.0.1', '*']
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '*']
 
 
 # CSRF_TRUSTED_ORIGINS = ['https://dev-00em.onrender.com']
@@ -59,6 +60,8 @@ INSTALLED_APPS = [
     'crispy_forms', # Crispy forms
 
     'storages',
+    'cloudinary',
+    'cloudinary_storage',
 
 
 ]
@@ -248,29 +251,10 @@ DATABASES = {
 }
 '''
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME' : "djxx2fuh3", 
+    'API_KEY' : "866892667816323", 
+    'API_SECRET' : "hC4nuyl3ItYY5jRI8bCuKiakodg"
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
